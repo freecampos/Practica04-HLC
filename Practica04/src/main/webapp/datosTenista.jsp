@@ -54,12 +54,9 @@
         <%
             HashMap datos = (HashMap) session.getAttribute("datos");
             if(datos != null){
-                int codigo = 0;
-                try{
-                    codigo = Integer.parseInt(request.getParameter("codigo"));
-                } catch(NumberFormatException e){}
+                String nombre = request.getParameter("nombre");
                 
-                tennis = (Tenista) datos.get(codigo);
+                tennis = (Tenista) datos.get(nombre);
                 signo.setCumpleaños(tennis.getFechaNac());
             }
         %>

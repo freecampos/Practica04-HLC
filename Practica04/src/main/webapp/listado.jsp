@@ -58,7 +58,7 @@
                      if(datos != null){
                         for(Object value : datos.values()){
                             Tenista tennis = (Tenista) value;
-                            String url = "datosTenista.jsp?codigo=" + tennis.getCodigo();
+                            String url = "datosTenista.jsp?nombre=" + tennis.getNombre();
                  %>    
                              <!-- Jugador -->
                              <div class="col-md-2">

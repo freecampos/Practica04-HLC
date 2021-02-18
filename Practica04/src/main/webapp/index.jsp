@@ -64,24 +64,24 @@
             if (data != null) {
                 for (Object value : data.values()) {
                     Tenista tenis = (Tenista) value;
-                    System.out.println("\n" + tenis.getCodigo() + tenis.getNombre());
+                    System.out.println("\n" + tenis.getNombre());
                 }
             } else { 
                 //Si no existen los tenistas, los creamos, poruqe no se ha iniciado sesion aun.
-                HashMap <Integer, Tenista> tennis = new HashMap<Integer, Tenista>();
+                HashMap <String, Tenista> tennis = new HashMap<String, Tenista>();
 
-                Tenista tennis1 = new Tenista(1, "Novak", "Djokovic", 12030, "1987-05-22");
-                Tenista tennis2 = new Tenista(2, "Rafael", "Nadal", 9850, "1986-06-03");
-                Tenista tennis3 = new Tenista(3, "Dominic", "Thiem", 9125, "1993-09-03");
-                Tenista tennis4 = new Tenista(4, "Daniil", "Medvedev", 8715, "1996-02-11");
-                Tenista tennis5 = new Tenista(5, "Roger", "Federer", 6630, "1981-08-08");
+                Tenista tennis1 = new Tenista("Novak", "Djokovic", 12030, "1987-05-22");
+                Tenista tennis2 = new Tenista("Rafael", "Nadal", 9850, "1986-06-03");
+                Tenista tennis3 = new Tenista("Dominic", "Thiem", 9125, "1993-09-03");
+                Tenista tennis4 = new Tenista("Daniil", "Medvedev", 8715, "1996-02-11");
+                Tenista tennis5 = new Tenista("Roger", "Federer", 6630, "1981-08-08");
 
                 //HashMap de los tenistas
-                tennis.put(tennis1.getCodigo(), tennis1);
-                tennis.put(tennis2.getCodigo(), tennis2);
-                tennis.put(tennis3.getCodigo(), tennis3);
-                tennis.put(tennis4.getCodigo(), tennis4);
-                tennis.put(tennis5.getCodigo(), tennis5);
+                tennis.put(tennis1.getNombre(), tennis1);
+                tennis.put(tennis2.getNombre(), tennis2);
+                tennis.put(tennis3.getNombre(), tennis3);
+                tennis.put(tennis4.getNombre(), tennis4);
+                tennis.put(tennis5.getNombre(), tennis5);
 
                 //Establecemos la sesion con los datos.
                 session.setAttribute("datos", tennis);

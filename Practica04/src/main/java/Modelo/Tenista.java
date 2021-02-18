@@ -3,7 +3,6 @@ package Modelo;
 import java.io.Serializable;
 
 public class Tenista implements Serializable{
-    private int codigo;
     private String nombre;
     private String apellido;
     private int puntos;
@@ -11,20 +10,11 @@ public class Tenista implements Serializable{
 
     public Tenista(){}
 
-    public Tenista(int codigo, String nombre, String apellido, int puntos, String fechaNac) {
-        this.codigo = codigo;
+    public Tenista(String nombre, String apellido, int puntos, String fechaNac) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.puntos = puntos;
         this.fechaNac = fechaNac;
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
     }
 
     public String getNombre() {
